@@ -10,11 +10,15 @@ class Account {
     }
 
     getBalance(email, password) {
-        if (this.email === email && this.#password === password) {
+        if (this.#authenticate(email, password)) {
             return this.#balance
         } else {
             return null
         }
+    }
+    
+    #authenticate(email, password) {
+        return this.email === email && this.#password === password
     }
 }
 
@@ -25,6 +29,5 @@ class Account {
 // }
 
 // instancia
-const myAccount = new Account(user)
-
-console.log(myAccount)
+const myAccount = new Account('tararara@gmail.com', 'tatata')
+console.log(myAccount.getBalance('tararara@gmail.com', 'tatata'))
