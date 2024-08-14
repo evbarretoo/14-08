@@ -19,10 +19,10 @@ class Account {
 }
 
 // objeto
-const user = {
-    email: 'johndogarfeld@gmail.com',
-    password: '2706'
-}
+// const user = {
+//     email: 'johndogarfeld@gmail.com',
+//     password: '2706'
+// }
 
 // instancia
 const myAccount = new Account(user)
